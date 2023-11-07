@@ -25,6 +25,6 @@ services:
       - 8082:8082
     image: chamsiala/docker:latest
     depends_on:
-      - mysqldbusername
+      - mysqldb
     networks:
       - default  # Specify the same network for the Spring Boot container
