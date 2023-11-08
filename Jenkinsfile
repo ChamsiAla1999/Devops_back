@@ -31,6 +31,15 @@ pipeline {
                 }
             }
         }
+
+        stage('BUILD Backend- INSTALL') {
+                    steps {
+                        withEnv(["JAVA_HOME=${tool name: 'JAVA_HOME', type: 'jdk'}"]) {
+                            sh 'mvn test'
+                        }
+                    }
+                }
+
         
 //************************************* BUILD FRONTEND - ANGULAR ***************************
                 stage('Checkout Frontend Repo') {
