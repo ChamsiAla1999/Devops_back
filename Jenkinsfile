@@ -32,7 +32,7 @@ pipeline {
             }
         }
 
-        stage('BUILD Backend- INSTALL') {
+        stage('test') {
                     steps {
                         withEnv(["JAVA_HOME=${tool name: 'JAVA_HOME', type: 'jdk'}"]) {
                             sh 'mvn test'
