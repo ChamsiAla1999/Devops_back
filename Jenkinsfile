@@ -162,21 +162,7 @@ pipeline {
      }
  }
  
-          stage('Run Docker Compose Front') {
-     steps {
-         script {'-f Dockerfile .'
-             checkout([
-                 $class: 'GitSCM',
-                 branches: [[name: '*/main']], 
-                 userRemoteConfigs: [[url: 'https://github.com/ChamsiAla1999/Devops_Front.git']]
-             ])'-f Dockerfile .'
 
-            sh 'docker-compose -f /var/lib/jenkins/workspace/project/Docker-compose.yml up -d'
-
-            
-         }
-     }
- }
          
     } }
     
